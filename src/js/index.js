@@ -16,4 +16,12 @@ btnSearch.addEventListener('click', async () => {
         console.error('Erro:', error);
         showError(error.message);
     }
+
+    btnSearch.addEventListener('click', validateUserInput);
+
+    inputSearch.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+        validateUserInput();
+    }
+});
 });
